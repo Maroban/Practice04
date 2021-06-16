@@ -6,12 +6,15 @@ public class Ex08 {
 
 		int[] num = new int[6];
 
-		for (int i = 0; i < 6; i++) {
+		for (int i = 0; i < num.length; i++) {
 			num[i] = (int) (Math.random() * 45) + 1;
 
-			System.out.println(num[i]);
+			while (i > 0 && num[i] == num[i - 1]) {
+				num[i] = (int) (Math.random() * 45) + 1;
+			}
+
+			System.out.print(num[i] + "\t");
 		}
-		
 	}
 
 }
